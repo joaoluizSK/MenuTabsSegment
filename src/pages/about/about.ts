@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
+  seg: string = "flame";
+
   constructor(public navCtrl: NavController) {
 
   }

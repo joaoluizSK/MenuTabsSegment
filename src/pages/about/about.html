@@ -1,5 +1,8 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
     <ion-title>
       About
     </ion-title>
@@ -7,5 +10,37 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-segment [(ngModel)]="seg" color="danger">
+    <ion-segment-button value="flame">
+      <ion-icon name='flame'></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="leaf">
+      <ion-icon name='leaf'></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div *ngIf="seg === 'flame'">
+    <ion-card>
+      <ion-card-header>
+        Flame
+      </ion-card-header>
+      <ion-card-content>
+        A flame (from Latin flamma) is the visible, gaseous part of
+        a fire. It is caused by a highly exothermic reaction taking place in
+        a thin zone.
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="seg === 'leaf'">
+    <ion-card>
+      <ion-card-header>
+        Leaf
+      </ion-card-header>
+      <ion-card-content>
+        A leaf is an organ of a vascular plant and is the principal
+        lateral appendage of the stem.
+      </ion-card-content>
+    </ion-card>
+  </div>
 
 </ion-content>
